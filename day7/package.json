@@ -1,0 +1,26 @@
+{
+  "name": "node.js",
+  "version": "1.0.0",
+  "description": "node js tutorial ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/suyashdhumal35/nodejs-tut.git)"
+  },
+  "keywords": [
+    "suyash"
+  ],
+  "author": "suyash",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
