@@ -6,3 +6,5 @@ const data = [
     { name: 'rohan', email: 'rohan33pawar@gmail.com' },
 ]
 module.exports = data;
+
+

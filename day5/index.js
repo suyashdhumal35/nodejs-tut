@@ -1,26 +1,40 @@
-const fs = require('fs');
-const path = require('path');
-const dirPath = path.join(__dirname, "crud");
-const filePath = `${dirPath}/apple.txt`
+
+const express = require('express')
+const app = express()
+
+app.get('', (req, resp) => {
+    resp.send(`
+        <h1>Welcome, THis is Home Page</h1>
+        <a href="/about">About</a><br/>
+        <a href="/help">Help</a>
+        `)
+});
+
+app.get('/about', (req, resp) => {
+    resp.send(`
+        <input type = "text" name = "" id = "" placeholder = "enter the" value="${req.query.name}" />
+    <button> Sumbit</button>
+    <br/><br/>
+        <a href="/">Home</a>
+        `)
+});
+
+app.get('/help', (req, resp) => {
+    resp.send(
+        [
+            {
+                name: "Suaysh",
+                email: "suayshdhumal@gmail.com"
+            },
+            {
+                name: "Suaysh",
+                email: "suayshdhumal@gmail.com"
+            },
+        ]
+    )
+});
+
+app.listen(5000);
 
 
-// create
-// fs.writeFileSync(filePath, 'This is a single text file')
-
-// read
-// fs.readFile(filePath, 'utf8', (err, item) => {
-//     console.log(item);
-// })
-
-// update
-// fs.appendFile(filePath, 'and file name is apple.txt', (err) => {
-//     if (!err) console.log(" file is updated");
-// })
-
-// rename
-//     fs.rename(filePath, `${dirPath}/fruit.txt`, (err) => {
-//         if (!err) console.log(" file name is updated");
-// })
-
-// delete
-// fs.unlinkSync(`${dirPath}/fruit.txt`)
+console.log('Server running at http://127.0.0.1:5000/');
