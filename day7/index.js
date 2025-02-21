@@ -12,9 +12,25 @@ app.get('', (req, resp) => {
 })
 app.get('/profile', (req, resp) => {
     const user =
-        { name: 'suyash', email: 'suyashdhumal@gmail.com', city: "mumbai" }
+    {
+        name: 'suyash',
+        email: 'suyashdhumal@gmail.com',
+        city: "mumbai",
+        skills: ['php', 'React js', "Tailwind CSS"]
+    }
     resp.render(`profile`, { user })
 });
+app.get('/login', (req, resp) => {
+    const user =
+    {
+        name: 'suyash',
+        email: 'suyashdhumal@gmail.com',
+        city: "mumbai",
+        skills: ['php', 'React js', "Tailwind CSS"]
+    }
+    resp.render(`login`, { user })
+});
+
 app.get('/home', (req, resp) => {
     resp.sendFile(`${publicPath}/home.html`)
 })
